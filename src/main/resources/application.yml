@@ -1,0 +1,25 @@
+server:
+  port: 8066
+mybatis:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+spring:
+  application:
+    name: state-machine
+  datasource:
+    url: jdbc:mysql://localhost:3306/outwork-platform?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  #mybatis-plus配置控制台打印完整带参数SQL语句
+
+  redis:
+    host: 10.0.0.175
+    port: 6379
+    password: anso2020
+
